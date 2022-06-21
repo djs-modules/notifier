@@ -1,0 +1,1286 @@
+{
+ "meta": {
+  "generator": "0.11.1",
+  "format": 22,
+  "date": 1655833717408
+ },
+ "custom": {
+  "general": {
+   "name": "General",
+   "files": {
+    "welcome": {
+     "name": "Welcome",
+     "type": "md",
+     "content": "## Welcome\n\n<strong>Welcome, this is \"@djs-modules/notifier\" module!</strong> <br />\n<strong>\"@djs-modules/notifier\" is a module that allows you to create a Twitch Notification System in your Discord bot.</strong>\n\n### Warning!\n\n<strong>To use this module You need to have [NodeJS v14 or Above](https://nodejs.org/) installed!</strong>\n\n## Features\n\n<span><strong>[🔑] Built in TypeScript</strong></span> <br />\n<span><strong>[⚙] 100% Promise-based</strong></span> <br />\n<span><strong>[🙂] TypeScript Support</strong></span> <br />\n\n## Installing\n\n<span><code>npm i @djs-modules/notifier</code></span> <br />\n<span><code>yarn add @djs-modules/notifier</code></span>\n\n## This module uses\n\n<span><strong>[1] [enmap (Database)](https://npmjs.com/package/enmap/)</strong></span> <br />\n<span><strong>[2] [TypeScript (Compiller)](https://npmjs.com/package/typescript/)</strong></span>\n\n## Links\n\n<span><strong>[1] [Documentation (soon)](https://djs-modules.js.org/)</strong></span> <br />\n<span><strong>[2] [Module Author](https://npmjs.com/~djs-modules/)</strong></span> <br />\n<span><strong>[3] [Support Server](https://discord.gg/zsTgXs24k2/)</strong></span>\n",
+     "path": "pages/general/welcome.md"
+    }
+   }
+  }
+ },
+ "classes": [
+  {
+   "name": "DBManager",
+   "description": "Database Manager",
+   "construct": {
+    "name": "DBManager",
+    "params": [
+     {
+      "name": "Options",
+      "description": "Module Options",
+      "type": [
+       [
+        [
+         "Options"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "props": [
+    {
+     "name": "options",
+     "description": "Module Options",
+     "type": [
+      [
+       [
+        "Options"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 22,
+      "file": "DBManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "database",
+     "description": "Module Database",
+     "type": [
+      [
+       [
+        "Enmap",
+        "<"
+       ],
+       [
+        "string",
+        ", "
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 30,
+      "file": "DBManager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "methods": [
+    {
+     "name": "get",
+     "description": "Method that Returns Guild Data from Database",
+     "params": [
+      {
+       "name": "id",
+       "description": "Discord Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 42,
+      "file": "DBManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "set",
+     "description": "Method that Changes Something from Database",
+     "params": [
+      {
+       "name": "id",
+       "description": "Discord Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "value",
+       "description": "Value to Set",
+       "type": [
+        [
+         [
+          "any"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "boolean",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 57,
+      "file": "DBManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "setProp",
+     "description": "Method that Sets Value to Key from Database",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Discord Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "name",
+       "description": "Streamer Username",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "key",
+       "description": "Property Name",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "value",
+       "description": "Value to Set",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "boolean",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 73,
+      "file": "DBManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "createStreamer",
+     "description": "Method that Creates Streamer Object",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Discord Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "name",
+       "description": "Streamer Username",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "StreamerObject",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 103,
+      "file": "DBManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "createGuild",
+     "description": "Method that Creates Guild Data",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Discord Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 133,
+      "file": "DBManager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "meta": {
+    "line": 9,
+    "file": "DBManager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "Job",
+   "description": "Job Manager",
+   "construct": {
+    "name": "Job",
+    "params": [
+     {
+      "name": "name",
+      "description": "Job Name",
+      "type": [
+       [
+        [
+         "string"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "cronTime",
+      "description": "Time when Job will be working",
+      "type": [
+       [
+        [
+         "any"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "onTick",
+      "description": "Command that will be done",
+      "type": [
+       [
+        [
+         "CronCommand"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "debug",
+      "description": "Debug Mode",
+      "type": [
+       [
+        [
+         "boolean"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "onComplete",
+      "description": "Command that will be done on complete",
+      "type": [
+       [
+        [
+         "CronCommand"
+        ]
+       ],
+       [
+        [
+         "null"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "start",
+      "description": "Force Start",
+      "type": [
+       [
+        [
+         "boolean"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "timeZone",
+      "description": "Time Zone",
+      "type": [
+       [
+        [
+         "string"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "context",
+      "description": "Context",
+      "type": [
+       [
+        [
+         "any"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "runOnInit",
+      "description": "Run on Init",
+      "type": [
+       [
+        [
+         "boolean"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "utcOffset",
+      "description": "UTC Offset",
+      "type": [
+       [
+        [
+         "string"
+        ]
+       ],
+       [
+        [
+         "number"
+        ]
+       ]
+      ]
+     },
+     {
+      "name": "unrefTimeout",
+      "description": "Unref Timeout",
+      "type": [
+       [
+        [
+         "boolean"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "meta": {
+    "line": 3,
+    "file": "Job.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "KeyManager",
+   "description": "Key Manager",
+   "construct": {
+    "name": "KeyManager",
+    "params": [
+     {
+      "name": "Options",
+      "description": "Module Options",
+      "type": [
+       [
+        [
+         "Options"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "props": [
+    {
+     "name": "options",
+     "description": "Module Options",
+     "type": [
+      [
+       [
+        "Options"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 23,
+      "file": "KeyManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "key",
+     "description": "Authorization Key",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 31,
+      "file": "KeyManager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "methods": [
+    {
+     "name": "get",
+     "description": "Method that returns Twitch Authorization Key",
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "string",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 50,
+      "file": "KeyManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "update",
+     "description": "Method that updates Twitch Authorization Key",
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "string",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 62,
+      "file": "KeyManager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "meta": {
+    "line": 10,
+    "file": "KeyManager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "Manager",
+   "description": "Main Manager",
+   "extends": [
+    [
+     [
+      "TypedEmitter",
+      "<"
+     ],
+     [
+      "ManagerEvents",
+      ">"
+     ]
+    ]
+   ],
+   "construct": {
+    "name": "Manager",
+    "params": [
+     {
+      "name": "Options",
+      "description": "Module Options",
+      "type": [
+       [
+        [
+         "Options"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "props": [
+    {
+     "name": "options",
+     "description": "Module Options",
+     "type": [
+      [
+       [
+        "Options"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 39,
+      "file": "Manager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "database",
+     "description": "Module Database",
+     "type": [
+      [
+       [
+        "DBManager"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 47,
+      "file": "Manager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "streamers",
+     "description": "Streamers Manager",
+     "type": [
+      [
+       [
+        "StreamersManager"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 54,
+      "file": "Manager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "key",
+     "description": "Key Manager",
+     "type": [
+      [
+       [
+        "KeyManager"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 61,
+      "file": "Manager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "methods": [
+    {
+     "name": "setChannel",
+     "description": "Method that sets Notifications Channel",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "channelID",
+       "description": "Channel ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 169,
+      "file": "Manager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "resetChannel",
+     "description": "Method that removes Notifications Channel from DB",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "boolean",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 188,
+      "file": "Manager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "events": [
+    {
+     "name": "streamStarted",
+     "description": "Emiited when Someone started a Stream",
+     "params": [
+      {
+       "name": "data",
+       "description": "Stream Object",
+       "type": [
+        [
+         [
+          "StreamData"
+         ]
+        ]
+       ]
+      }
+     ],
+     "meta": {
+      "line": 255,
+      "file": "Manager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "meta": {
+    "line": 23,
+    "file": "Manager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "StreamersManager",
+   "description": "Streamers Manager",
+   "construct": {
+    "name": "StreamersManager",
+    "params": [
+     {
+      "name": "Options",
+      "description": "Module Options",
+      "type": [
+       [
+        [
+         "Options"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "props": [
+    {
+     "name": "options",
+     "description": "Module Options",
+     "type": [
+      [
+       [
+        "Options"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 22,
+      "file": "StreamersManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "database",
+     "description": "Module Database",
+     "type": [
+      [
+       [
+        "DBManager"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 30,
+      "file": "StreamersManager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "methods": [
+    {
+     "name": "add",
+     "description": "Method that pushes Streamer into Streamers Base",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "name",
+       "description": "Streamer Username",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "ErrorObject",
+        "|"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 38,
+      "file": "StreamersManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "remove",
+     "description": "Method that removes Streamer from Streamers Base",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      },
+      {
+       "name": "name",
+       "description": "Streamer Username",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "ErrorObject",
+        "|"
+       ],
+       [
+        "GuildData",
+        ">"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 68,
+      "file": "StreamersManager.ts",
+      "path": "src/classes"
+     }
+    },
+    {
+     "name": "all",
+     "description": "Method that returns all the Streamers from Streamers Base",
+     "params": [
+      {
+       "name": "guildID",
+       "description": "Guild ID",
+       "type": [
+        [
+         [
+          "string"
+         ]
+        ]
+       ]
+      }
+     ],
+     "returns": [
+      [
+       [
+        "Promise",
+        "<"
+       ],
+       [
+        "ErrorObject",
+        "|"
+       ],
+       [
+        "Array",
+        "<"
+       ],
+       [
+        "StreamerObject",
+        ">>"
+       ]
+      ]
+     ],
+     "meta": {
+      "line": 94,
+      "file": "StreamersManager.ts",
+      "path": "src/classes"
+     }
+    }
+   ],
+   "meta": {
+    "line": 9,
+    "file": "StreamersManager.ts",
+    "path": "src/classes"
+   }
+  }
+ ],
+ "interfaces": [],
+ "typedefs": [
+  {
+   "name": "Options",
+   "description": "Module Options",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "credentials",
+     "description": "{@link https://dev.twitch.tv/console/apps|Twitch Credentials}",
+     "type": [
+      [
+       [
+        "TwitchCredentials"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "DBName",
+     "description": "Database Name",
+     "optional": true,
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "DBPath",
+     "description": "Database Path",
+     "optional": true,
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "debug",
+     "description": "Debug Mode",
+     "optional": true,
+     "type": [
+      [
+       [
+        "boolean"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 207,
+    "file": "Manager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "TwitchCredentials",
+   "description": "Twitch Credentials",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "clientID",
+     "description": "Twitch Client ID",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "clientSecret",
+     "description": "Twitch Client Secret",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 216,
+    "file": "Manager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "GuildData",
+   "description": "Guild Data",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "streamers",
+     "description": "Twitch Streamers Array",
+     "type": [
+      [
+       [
+        "Array",
+        "<"
+       ],
+       [
+        "StreamerObject",
+        ">"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "channelID",
+     "description": "Channel ID where notifications will be posted",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 223,
+    "file": "Manager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "StreamerObject",
+   "description": "Streamer Object",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "name",
+     "description": "Streamer Username",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "latestStream",
+     "description": "Latest Stream",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ],
+      [
+       [
+        "null"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 230,
+    "file": "Manager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "StreamerData",
+   "description": "Stream Data Object",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "username",
+     "description": "Streamer Username",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "profile_pic",
+     "description": "Profile Avatar",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "title",
+     "description": "Stream Name",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "thumbnail",
+     "description": "Stream Thumbnail",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "date",
+     "description": "When stream started",
+     "type": [
+      [
+       [
+        "number"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 237,
+    "file": "Manager.ts",
+    "path": "src/classes"
+   }
+  },
+  {
+   "name": "ErrorObject",
+   "description": "Error Object",
+   "type": [
+    [
+     [
+      "Object"
+     ]
+    ]
+   ],
+   "props": [
+    {
+     "name": "status",
+     "description": "Status",
+     "type": [
+      [
+       [
+        "boolean"
+       ]
+      ]
+     ]
+    },
+    {
+     "name": "message",
+     "description": "Returned Message",
+     "type": [
+      [
+       [
+        "string"
+       ]
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "line": 248,
+    "file": "Manager.ts",
+    "path": "src/classes"
+   }
+  }
+ ],
+ "externals": []
+}
