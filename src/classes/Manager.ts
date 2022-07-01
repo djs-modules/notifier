@@ -67,7 +67,7 @@ export class Manager extends TypedEmitter<ManagerEvents> {
 
     const job = new Job(
       "Streamers Check",
-      "*/1 * * * *", // 10 minutes
+      "*/10 * * * *", // every 10 minutes
       async () => {
         const clientID = this.options.credentials.clientID;
         const key = await this.key.get();

@@ -22,6 +22,7 @@
 
 <span><strong>[1] [enmap (Database)](https://npmjs.com/package/enmap/)</strong></span> <br />
 <span><strong>[2] [TypeScript (Compiller)](https://npmjs.com/package/typescript/)</strong></span>
+<span><strong>[3] [undici (Twitch API)](https://npmjs.com/package/undici/)</strong></span>
 
 ## Links
 
