@@ -9,22 +9,23 @@
 
 ## Features
 
-<span><strong>[🔑] Built in TypeScript</strong></span> <br />
-<span><strong>[⚙] 100% Promise-based</strong></span> <br />
-<span><strong>[🙂] TypeScript Support</strong></span> <br />
+<strong>[🔑] Built in TypeScript</strong> <br />
+<strong>[⚙] 100% Promise-based</strong> <br />
+<strong>[🙂] TypeScript Support</strong>
 
 ## Installing
 
-<span><code>npm i @djs-modules/notifier</code></span> <br />
-<span><code>yarn add @djs-modules/notifier</code></span>
+<code>npm i @djs-modules/notifier</code> <br />
+<code>yarn add @djs-modules/notifier</code>
 
 ## This module uses
 
-<span><strong>[1] [enmap (Database)](https://npmjs.com/package/enmap/)</strong></span> <br />
-<span><strong>[2] [TypeScript (Compiller)](https://npmjs.com/package/typescript/)</strong></span>
+<strong>[1] [enmap (Database)](https://npmjs.com/package/enmap/)</strong> <br />
+<strong>[2] [TypeScript (Compiller)](https://npmjs.com/package/typescript/)</strong> <br />
+<strong>[3] [undici (Twitch API)](https://npmjs.com/package/undici/)</strong>
 
 ## Links
 
-<span><strong>[1] [Documentation (soon)](https://djs-modules.js.org/)</strong></span> <br />
-<span><strong>[2] [Module Author](https://npmjs.com/~djs-modules/)</strong></span> <br />
-<span><strong>[3] [Support Server](https://discord.gg/zsTgXs24k2/)</strong></span>
+<strong>[1] [Documentation](https://djs-modules.js.org/)</strong> <br />
+<strong>[2] [Module Author](https://npmjs.com/~djs-modules/)</strong> <br />
+<strong>[3] [Support Server](https://discord.gg/zsTgXs24k2/)</strong>
